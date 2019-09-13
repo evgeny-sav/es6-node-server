@@ -1,0 +1,69 @@
+{
+  "name": "es6-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemone ./dist/server.bundle.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/index.js",
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.{jsx,js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.1",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "helmet": "^3.21.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "lint-staged": "^9.2.5",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.0",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "webpack": "^4.40.1",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2",
+    "winston": "^3.2.1"
+  }
+}
