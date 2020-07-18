@@ -52,7 +52,7 @@
     "husky": "^3.0.5",
     "jsonwebtoken": "^8.5.1",
     "lint-staged": "^9.2.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mongoose": "^5.7.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.12.0",
